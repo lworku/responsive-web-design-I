@@ -31,9 +31,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	
-	margin: 0 100px;
-
 }
 
 
@@ -58,7 +55,7 @@ table {
 html, body {
 	font-family: 'Titillium Web', sans-serif;
 	margin: 0 auto;
-	width: 900px;
+	width: 95%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -71,28 +68,32 @@ h1, h2, h3, h4, h5 {
 
 .navigation {
 	display: flex;
-	justify-content: space-evenly;
-	justify-content: center;
+	flex-direction:row-reverse;
 	align-items: center;
-	align-content: center;
-	margin: auto 100px;
+	align-content: baseline;
+	margin-top: 30px;
   }
 
-.navigation a {
-	width: 98%; 
-	margin: 0px 10px;
-	border: none;
-	padding: 20px;
-	border-radius: 5px;
+  .navigation :last-child{
+	  align-content: flex-end;
+	  }
+
+.nav-bar-media {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.nav-bar-media a{
+	justify-content: space-around;
 	color: gray;
 	text-decoration: none;
 	background:white;
-	
 }
 
-.navigation :last-child {
-	background: none;
-}
+/* .logo {
+	width: 100%;
+} */
 
   .header-words-button{
 	font-size: 75px;
@@ -129,6 +130,14 @@ h1, h2, h3, h4, h5 {
 	width: 98%;
 	margin: 25px auto;
 }
+
+  .half {
+	  padding-right: 20px;
+  }
+
+  .thirds{
+	  padding-right: 20px;
+  }
   .index-middle-img {
 	  display: block;
 	  width: 98%;
@@ -160,8 +169,9 @@ h1, h2, h3, h4, h5 {
 
 
 .index-top-line-break{
-	width: 98%;
+	/* width: 98%; */
 	margin: 0px auto;
+	color: black solid;
 }
 
 .index-bottom-line-break{
@@ -227,18 +237,17 @@ h1, h2, h3, h4, h5 {
 	margin: 30px 20px; 
 }
 
-  .contact {
-	display: flex;
-	justify-content: flex-start;
+  .contact-info {
+	display: inline-block;
 	margin-left: 20px;
 	margin-top: 50px;
   }
 
-  .contact h1 {
+  .contact-info h1 {
 	font-size: 24px;
   }
 
-  .contact p {
+  .contact-info p {
 	font-size: 16px;
   }
 
@@ -248,5 +257,70 @@ h1, h2, h3, h4, h5 {
 	display: block;
 	text-align: center;
 	margin-top: 100px;
+	margin-bottom: 10px;
   }
 
+/* Tablet forward design starts here - 800px breakpoint */
+@media (max-width: 800px){
+
+
+	.navigation{
+		flex-wrap: wrap-reverse;
+		flex-direction: column;
+	}
+
+	.nav-bar-media{
+		margin-top: 20px;
+	}
+	/* .navigation :last-child {
+		
+	} */
+
+	.header-img {
+		display: none;
+	}
+
+	.thirds h1 {
+		font-size: 16px;
+	}
+
+	.half {
+		font-size: 16px;
+	}
+
+	.index-bottom-content p{
+		font-size: 16px;
+	}
+
+	.thirds {
+		padding-right: 15px;
+	}
+
+	.contact-info h1{
+		font-size: 16px;
+	}
+
+	.contact-info {
+		margin-top: 25px;
+	}
+
+	.contact-paragraph{
+		margin-top: 20px;
+	}
+
+	.footer{
+		margin-top: 50px;
+	}
+
+
+}
+
+/* Mobile forward design starts here - 500px breakpoint */
+@media (max-width: 500px){
+
+	.navigation{
+		flex-direction: column;
+	}
+
+
+}
