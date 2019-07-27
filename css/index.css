@@ -82,10 +82,10 @@ h1, h2, h3, h4, h5 {
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
+
 }
 
 .nav-bar-media a{
-	justify-content: space-around;
 	color: gray;
 	text-decoration: none;
 	background:white;
@@ -322,5 +322,39 @@ h1, h2, h3, h4, h5 {
 		flex-direction: column;
 	}
 
+	.nav-bar-media{
+		flex-direction: column;
+		text-align: center;
+	}
 
+	.nav-bar-media a{
+		padding: 15px;
+		border-top: 1px gray solid;
+	}
+	.nav-bar-media :last-child{
+		border-bottom: 1px gray solid;
+	}
+
+	.index-top-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.half p{
+		margin-bottom: 20px;
+	}
+
+	.index-bottom-content {
+		display: flex;
+		flex-direction: column;
+		margin: 20px auto;
+	}
+
+	.thirds p{
+		margin-bottom: 20px;
+	}
+
+	.contact-info{
+		margin-left: 0px;
+	}
 }
